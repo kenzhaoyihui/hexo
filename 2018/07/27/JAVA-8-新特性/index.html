@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: XML-RPC | Kenzhaoyihui&#39;s Blog</title>
+  <title>JAVA 8 新特性 | Kenzhaoyihui&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -188,69 +188,114 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/07/07/RPC/">RPC</a></h4>
-                            
-                            <p><time datetime="2018-07-07T05:33:00.000Z"><a href="/2018/07/07/RPC/">2018-07-07</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-07-27T01:07:00.000Z" itemprop="datePublished">
+          2018-07-27
+      </time>
+    
+    
+    | 
+    <a href='/tags/JAVA/'>JAVA</a>
+    
+    
+</span>
+                <h1>JAVA 8 新特性</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="JAVA-8-常见新特性"><a href="#JAVA-8-常见新特性" class="headerlink" title="JAVA 8 常见新特性"></a>JAVA 8 常见新特性</h3><ul>
+<li><h4 id="Lambda-包括更好的类型推断）"><a href="#Lambda-包括更好的类型推断）" class="headerlink" title="Lambda(包括更好的类型推断）"></a>Lambda(包括更好的类型推断）</h4></li>
+<li><h4 id="Stream-API"><a href="#Stream-API" class="headerlink" title="Stream API"></a>Stream API</h4></li>
+<li><h4 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h4></li>
+<li><h4 id="方法引用与构造器引用"><a href="#方法引用与构造器引用" class="headerlink" title="方法引用与构造器引用"></a>方法引用与构造器引用</h4></li>
+<li><h4 id="New-Date-Time-API-JSR-310"><a href="#New-Date-Time-API-JSR-310" class="headerlink" title="New Date/Time API(JSR 310)"></a>New Date/Time API(JSR 310)</h4></li>
+<li><h4 id="重复注解和类型注解"><a href="#重复注解和类型注解" class="headerlink" title="重复注解和类型注解"></a>重复注解和类型注解</h4></li>
+<li><h4 id="Optional-最大化减少空指针异常"><a href="#Optional-最大化减少空指针异常" class="headerlink" title="Optional 最大化减少空指针异常"></a>Optional 最大化减少空指针异常</h4></li>
+<li><h4 id="接口的静态方法和默认方法"><a href="#接口的静态方法和默认方法" class="headerlink" title="接口的静态方法和默认方法"></a>接口的静态方法和默认方法</h4></li>
+<li><h4 id="Java编译器的新特性-–-参数名称-parameters"><a href="#Java编译器的新特性-–-参数名称-parameters" class="headerlink" title="Java编译器的新特性 – 参数名称(-parameters)"></a>Java编译器的新特性 – 参数名称(-parameters)</h4></li>
+<li><h4 id="Hashorn-JavaScript引擎-支持jss）和类依赖分析器-jdeps"><a href="#Hashorn-JavaScript引擎-支持jss）和类依赖分析器-jdeps" class="headerlink" title="Hashorn JavaScript引擎 (支持jss）和类依赖分析器(jdeps)"></a>Hashorn JavaScript引擎 (支持jss）和类依赖分析器(jdeps)</h4></li>
+<li><h4 id="对Base64编码的支持"><a href="#对Base64编码的支持" class="headerlink" title="对Base64编码的支持"></a>对Base64编码的支持</h4></li>
+<li><h4 id="并行数组"><a href="#并行数组" class="headerlink" title="并行数组"></a>并行数组</h4></li>
+<li><h4 id="并发性"><a href="#并发性" class="headerlink" title="并发性"></a>并发性</h4></li>
+<li><h4 id="JVM-新特性-–-使用Metaspace-JEP-122-代替持久代-PermGen-space"><a href="#JVM-新特性-–-使用Metaspace-JEP-122-代替持久代-PermGen-space" class="headerlink" title="JVM 新特性 – 使用Metaspace(JEP 122) 代替持久代(PermGen space)"></a>JVM 新特性 – 使用Metaspace(JEP 122) 代替持久代(PermGen space)</h4></li>
+</ul>
+<p>转自： <a href="https://blog.csdn.net/u014470581/article/details/54944384" target="_blank" rel="noopener">https://blog.csdn.net/u014470581/article/details/54944384</a></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Coding Go On!</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/07/27/JAVA-8-Stream-API/" style="float: left;">
+        ← JAVA 8 -- Stream API
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/07/22/java-CountDownLatch、CyclicBarrier和-Semaphore/">
+        java -- CountDownLatch、CyclicBarrier和 Semaphore →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

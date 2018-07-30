@@ -99,6 +99,8 @@
 				  	
 				    <li><a href="/categories/ELK/" class="animsition-link">ELK<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/JAVA/" class="animsition-link">JAVA<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/RPC/" class="animsition-link">RPC<small>(1)</small></a></li>
@@ -220,6 +222,188 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/29/Java-并发/">Java 并发</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-29T04:55:00.000Z" itemprop="datePublished">
+          2018-07-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/JAVA/'>JAVA</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Java 并发体系
+Java内存模型(JMM)
+线程通信机制
+内存共享 - Java采用
+消息传递
+
+
+内存模型
+重排序
+为了程序的性能，处理器和编译器都会对程序进行重排序处理
+条件： 在单线程环境下不能改变程序的运行的结果；存在数据依赖关系的不允许重排序
+问题： 重排序在多线程环境下可能会导致数据不安全
+
+
+顺序一致性
+多线程环境下的理论参考模型
+为程序提供了极强的内存可见性保证
+特性： 
+一个线程中的所有操作必须按照程序的顺序来执行
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/29/Java-并发/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/27/JAVA-8-Stream-API/">JAVA 8 -- Stream API</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-27T07:25:00.000Z" itemprop="datePublished">
+          2018-07-27
+      </time>
+    
+    
+    | 
+    <a href='/tags/JAVA/'>JAVA</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        今天来总结一下 Java8 新特性Stream API的使用。
+Stream APIStream流程： 创建流–&gt; 中间操作 –&gt; 终止操作
+
+创建流的几种方法
+Collection 系列的stream() 方法
+Arrays的stream() 方法
+Stream 接口的of方法
+Stream 无限流的创建， 利用迭代和生成
+
+
+
+12345678910111213141516171819202122232425262728
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/27/JAVA-8-Stream-API/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/27/JAVA-8-新特性/">JAVA 8 新特性</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-27T01:07:00.000Z" itemprop="datePublished">
+          2018-07-27
+      </time>
+    
+    
+    | 
+    <a href='/tags/JAVA/'>JAVA</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        JAVA 8 常见新特性
+Lambda(包括更好的类型推断）
+Stream API
+函数式接口
+方法引用与构造器引用
+New Date/Time API(JSR 310)
+重复注解和类型注解
+Optional 最大化减少空指针异常
+接口的静态方法和默认方法
+Java编译器的新特性 – 参数名称(-parameters)
+Hashorn JavaScript引擎 (支持jss）和类依赖分析器(jdeps)
+对Base64编码的支持
+并行数
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/27/JAVA-8-新特性/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/22/java-CountDownLatch、CyclicBarrier和-Semaphore/">java -- CountDownLatch、CyclicBarrier和 Semaphore</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-22T11:32:00.000Z" itemprop="datePublished">
+          2018-07-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JAVA/'>JAVA</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        CountDownLatchCountDownLatch 在java.util.concurrent包中， 可以用它实现类似于计数器的功能。实现得是等待其他任务执行完毕之后才能继续执行主任务。
+CountDownLatch类只提供了一个构造器：1234public CountDownLatch(int count) &#123;        if (count &lt; 0) throw new IllegalArgumentExce
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/22/java-CountDownLatch、CyclicBarrier和-Semaphore/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
