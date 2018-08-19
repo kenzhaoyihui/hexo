@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>SSM 配置文件整合 | Kenzhaoyihui&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Kenzhaoyihui's Blog">
+    <meta name="author" content="Kenzhaoyihui">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Kenzhaoyihui&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/tags/JAVA/" target="_BLANK" class="animsition-link">JAVA</a></li>
+                    
+                        <li><a href="/tags/XML-RPC/" target="_BLANK" class="animsition-link">XML-RPC</a></li>
+                    
+                        <li><a href="/tags/ELK" target="_BLANK" class="animsition-link">ELK</a></li>
+                    
+                        <li><a href="/tags/SpringBoot" target="_BLANK" class="animsition-link">SpringBoot</a></li>
+                    
+                        <li><a href="/tags/SpringCloud" target="_BLANK" class="animsition-link">SpringCloud</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ELK/" class="animsition-link">ELK<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JAVA/" class="animsition-link">JAVA<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/RPC/" class="animsition-link">RPC<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://github.com/kenzhaoyihui" class="animsition-link">Kenzhaoyihui Github</a></li>
+                    
+                    <li><a href="2993614148@qq.com" class="animsition-link">Email 2993614148@qq.com</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Kenzhaoyihui's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/kenzhaoyihui" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.weibo.com/u/3478925700" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-08-02T12:46:00.000Z" itemprop="datePublished">
+          2018-08-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/JAVA/'>JAVA</a>
+    
+    
+</span>
+                <h1>SSM 配置文件整合</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="Spring-SpringMVC-MyBatis"><a href="#Spring-SpringMVC-MyBatis" class="headerlink" title="Spring + SpringMVC + MyBatis"></a>Spring + SpringMVC + MyBatis</h4><ul>
+<li>/WEB-INF/web.xml</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">  &lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span><br><span class="line">xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;!-- 1. Start the Spring container--&gt;</span><br><span class="line">  &lt;context-param&gt;</span><br><span class="line">    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</span><br><span class="line">    &lt;param-value&gt;classpath:applicationContext.xml&lt;/param-value&gt;</span><br><span class="line">  &lt;/context-param&gt;</span><br><span class="line"></span><br><span class="line">  &lt;listener&gt;</span><br><span class="line">    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;</span><br><span class="line">  &lt;/listener&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;!-- 2. springmvc dispatcherservlet handler, handle the request--&gt;</span><br><span class="line">  &lt;servlet&gt;</span><br><span class="line">    &lt;servlet-name&gt;springDispatcherServlet&lt;/servlet-name&gt;</span><br><span class="line">    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;</span><br><span class="line"></span><br><span class="line">    &lt;init-param&gt;</span><br><span class="line">      &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</span><br><span class="line">      &lt;param-value&gt;classpath:spring-mvc-servlet.xml&lt;/param-value&gt;</span><br><span class="line">    &lt;/init-param&gt;</span><br><span class="line"></span><br><span class="line">    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</span><br><span class="line">  &lt;/servlet&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!-- 3. UTF-8 fillter--&gt;</span><br><span class="line">  &lt;filter&gt;</span><br><span class="line">    &lt;filter-name&gt;encodingFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;</span><br><span class="line"></span><br><span class="line">    &lt;init-param&gt;</span><br><span class="line">      &lt;param-name&gt;encoding&lt;/param-name&gt;</span><br><span class="line">      &lt;param-value&gt;UTF-8&lt;/param-value&gt;</span><br><span class="line">    &lt;/init-param&gt;</span><br><span class="line"></span><br><span class="line">    &lt;init-param&gt;</span><br><span class="line">      &lt;param-name&gt;forceRequestEncoding&lt;/param-name&gt;</span><br><span class="line">      &lt;param-value&gt;true&lt;/param-value&gt;</span><br><span class="line">    &lt;/init-param&gt;</span><br><span class="line"></span><br><span class="line">    &lt;init-param&gt;</span><br><span class="line">      &lt;param-name&gt;forceResponseEncoding&lt;/param-name&gt;</span><br><span class="line">      &lt;param-value&gt;true&lt;/param-value&gt;</span><br><span class="line">    &lt;/init-param&gt;</span><br><span class="line">  &lt;/filter&gt;</span><br><span class="line"></span><br><span class="line">  &lt;filter-mapping&gt;</span><br><span class="line">    &lt;filter-name&gt;encodingFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">  &lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> &lt;!-- 4. Use Rest URI, tranfer the POST request to PUT or DELETE request, need the hiddenHttpMethodFilter--&gt;</span><br><span class="line">  &lt;filter&gt;</span><br><span class="line">    &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;filter-class&gt;org.springframework.web.filter.HiddenHttpMethodFilter&lt;/filter-class&gt;</span><br><span class="line">  &lt;/filter&gt;</span><br><span class="line"></span><br><span class="line">  &lt;filter-mapping&gt;</span><br><span class="line">    &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">  &lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">  &lt;filter&gt;</span><br><span class="line">    &lt;filter-name&gt;HttpPutFormContentFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;filter-class&gt;org.springframework.web.filter.HttpPutFormContentFilter&lt;/filter-class&gt;</span><br><span class="line">  &lt;/filter&gt;</span><br><span class="line"></span><br><span class="line">  &lt;filter-mapping&gt;</span><br><span class="line">    &lt;filter-name&gt;HttpPutFormContentFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">  &lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Spring配置文件 resources/applicationContext.xml</li>
+</ul>
+<p>db.properties</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jdbc.jdbcUrl = jdbc:mariadb://127.0.0.1:3306/ssm_crud</span><br><span class="line">jdbc.driverClass = org.mariadb.jdbc.Driver</span><br><span class="line">jdbc.user = root</span><br><span class="line">jdbc.password = 123456</span><br></pre></td></tr></table></figure>
+<p>applicationContext.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;</span><br><span class="line">       xmlns:context=&quot;http://www.springframework.org/schema/context&quot; xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;</span><br><span class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!--Spring  configuration file, mianly about the transaction--&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--扫描除了controller包以外的包， 防止和springmvc里扫描重复， 防止springmvc ioc容器被多次扫描--&gt;</span><br><span class="line">    &lt;context:component-scan base-package=&quot;com.yzhao&quot;&gt;</span><br><span class="line">        &lt;context:exclude-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;</span><br><span class="line">    &lt;/context:component-scan&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 加载数据库配置，为之后的数据源做准备--&gt;</span><br><span class="line">   &lt;context:property-placeholder location=&quot;classpath:dbconfig.properties&quot;/&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++DataSource+++++++++++++++++++++++++++++++++++++++++--&gt;</span><br><span class="line">    &lt;!--DataSource 注册数据库资源，这里用的c3p0， 当然也可以用其他的，如druid--&gt;</span><br><span class="line">    &lt;bean id=&quot;pooledDataSource&quot; class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;jdbcUrl&quot; value=&quot;$&#123;jdbc.jdbcUrl&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;driverClass&quot; value=&quot;$&#123;jdbc.driverClass&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;user&quot; value=&quot;$&#123;jdbc.user&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;123456&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">   &lt;!-- Transaction 声明式事物处理--&gt;</span><br><span class="line">    &lt;bean class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot; id=&quot;transactionManager&quot;&gt;</span><br><span class="line">        &lt;!-- manage the dataSource--&gt;</span><br><span class="line">        &lt;property name=&quot;dataSource&quot; ref=&quot;pooledDataSource&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- Can use the based annotation transaction or based the XML transaction(Advice to use the XML) 配置切面和切入点--&gt;</span><br><span class="line">    &lt;aop:config&gt;</span><br><span class="line">        &lt;!-- PointCut--&gt;</span><br><span class="line">        &lt;aop:pointcut id=&quot;txPoint&quot; expression=&quot;execution(* com.yzhao.crud.service..*(..))&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- transaction advisor--&gt;</span><br><span class="line">        &lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut-ref=&quot;txPoint&quot;/&gt;</span><br><span class="line">    &lt;/aop:config&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- Config the transaction enhancement(improvement), how the transaction to cut 创建通知--&gt;</span><br><span class="line">    &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</span><br><span class="line">        &lt;tx:attributes&gt;</span><br><span class="line">            &lt;!-- All the method is the transaction methods--&gt;</span><br><span class="line">            &lt;tx:method name=&quot;*&quot;/&gt;</span><br><span class="line"></span><br><span class="line">            &lt;!-- methods of startwith the get--&gt;</span><br><span class="line">            &lt;tx:method name=&quot;get*&quot; read-only=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;/tx:attributes&gt;</span><br><span class="line">    &lt;/tx:advice&gt;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">   &lt;!--+++++++++++++++++++++++++++++++++++++++++++++++++++About MyBatis++++++++++++++++++++++++++++++++++++++++--&gt;</span><br><span class="line">    &lt;!-- Configuration about mybatis 整合mybatis--&gt;</span><br><span class="line"></span><br><span class="line">    &lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</span><br><span class="line">    &lt;!--导入mybatis核心配置文件 --&gt;</span><br><span class="line">        &lt;property name=&quot;configLocation&quot; value=&quot;classpath:mybatis-config.xml&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;dataSource&quot; ref=&quot;pooledDataSource&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- mybatis mapper file， 导入映射文件--&gt;</span><br><span class="line">        &lt;property name=&quot;mapperLocations&quot; value=&quot;classpath:mapper/*.xml&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- Config the mybatis mapperScannerConfig, add the mybatis interface implements to spring IOC--&gt;</span><br><span class="line">    &lt;!--Spring为mapper接口创建代理对象 --&gt;</span><br><span class="line">    &lt;bean class=&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;</span><br><span class="line">        &lt;!-- Scanner all the dao interface implements , then add to the spring IOC--&gt;</span><br><span class="line">        &lt;property name=&quot;basePackage&quot; value=&quot;com.yzhao.crud.dao&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- Configuration the sqlSession--&gt;</span><br><span class="line">    &lt;bean id=&quot;sqlSession&quot; class=&quot;org.mybatis.spring.SqlSessionTemplate&quot;&gt;</span><br><span class="line">        &lt;constructor-arg name=&quot;sqlSessionFactory&quot; ref=&quot;sqlSessionFactory&quot; /&gt;</span><br><span class="line">        &lt;constructor-arg name=&quot;executorType&quot; value=&quot;BATCH&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>resources/mybatis-config.xml</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!--mybatis设置，如开启驼峰规则，懒加载等 --&gt;</span><br><span class="line">    &lt;settings&gt;</span><br><span class="line"></span><br><span class="line">        &lt;setting name=&quot;mapUnderscoreToCamelCase&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;setting name=&quot;lazyLoadingEnabled&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">    &lt;/settings&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;typeAliases&gt;</span><br><span class="line">        &lt;package name=&quot;com.yzhao.crud.bean&quot;/&gt;</span><br><span class="line">    &lt;/typeAliases&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!--分页插件 --&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin interceptor=&quot;com.github.pagehelper.PageInterceptor&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;reasonable&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!--mapper file path mapper映射文件路径--&gt;</span><br><span class="line">    &lt;!--&lt;mappers&gt;--&gt;</span><br><span class="line">        &lt;!--&lt;mapper resource=&quot;mappers/OrderMapper.xml&quot;/&gt;--&gt;</span><br><span class="line">        &lt;!--&lt;mapper resource=&quot;mappers/UserMapper.xml&quot;/&gt;--&gt;</span><br><span class="line">    &lt;!--&lt;/mappers&gt;--&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>resources/[dispatcherServletName]-servlet.xml</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span><br><span class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</span><br><span class="line">       xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;</span><br><span class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- SpringMVC configuration file--&gt;</span><br><span class="line">	&lt;!--扫描controller包，处理映射url和method --&gt;</span><br><span class="line">    &lt;context:component-scan base-package=&quot;com.yzhao&quot; use-default-filters=&quot;false&quot;&gt;</span><br><span class="line">        &lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;</span><br><span class="line">    &lt;/context:component-scan&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- ViewResolver 视图解析器--&gt;</span><br><span class="line">    &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;</span><br><span class="line">    &lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- Standand Configuration--&gt;</span><br><span class="line">    &lt;!-- static resources 静态资源访问--&gt;</span><br><span class="line">    &lt;mvc:default-servlet-handler/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--springmvc  the higher function, like: JSR303, ajax, mapping, &quot;RequestMappingHandleMapping, ExceptionHandleExceptionResolver, RequestMappingHandlerAdapter--&gt;</span><br><span class="line">    &lt;mvc:annotation-driven/&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>resources/mapper/*-mapper.xml</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line">&lt;mapper namespace=&quot;com.yzhao.crud.dao.EmployeeMapper&quot;&gt;</span><br><span class="line">  &lt;resultMap id=&quot;BaseResultMap&quot; type=&quot;com.yzhao.crud.bean.Employee&quot;&gt;</span><br><span class="line">    &lt;id column=&quot;emp_id&quot; jdbcType=&quot;INTEGER&quot; property=&quot;empId&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;emp_name&quot; jdbcType=&quot;VARCHAR&quot; property=&quot;empName&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;gender&quot; jdbcType=&quot;CHAR&quot; property=&quot;gender&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;email&quot; jdbcType=&quot;VARCHAR&quot; property=&quot;email&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;d_id&quot; jdbcType=&quot;INTEGER&quot; property=&quot;dId&quot; /&gt;</span><br><span class="line">  &lt;/resultMap&gt;</span><br><span class="line"></span><br><span class="line">  &lt;resultMap id=&quot;WithDeptResultMap&quot; type=&quot;com.yzhao.crud.bean.Employee&quot;&gt;</span><br><span class="line">    &lt;id column=&quot;emp_id&quot; jdbcType=&quot;INTEGER&quot; property=&quot;empId&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;emp_name&quot; jdbcType=&quot;VARCHAR&quot; property=&quot;empName&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;gender&quot; jdbcType=&quot;CHAR&quot; property=&quot;gender&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;email&quot; jdbcType=&quot;VARCHAR&quot; property=&quot;email&quot; /&gt;</span><br><span class="line">    &lt;result column=&quot;d_id&quot; jdbcType=&quot;INTEGER&quot; property=&quot;dId&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;association property=&quot;department&quot; javaType=&quot;com.yzhao.crud.bean.Department&quot;&gt;</span><br><span class="line">      &lt;id column=&quot;dept_id&quot; property=&quot;deptId&quot; /&gt;</span><br><span class="line">      &lt;result column=&quot;dept_name&quot; property=&quot;deptName&quot;/&gt;</span><br><span class="line">    &lt;/association&gt;</span><br><span class="line">  &lt;/resultMap&gt;</span><br><span class="line">  &lt;sql id=&quot;Example_Where_Clause&quot;&gt;</span><br><span class="line">    &lt;where&gt;</span><br><span class="line">      &lt;foreach collection=&quot;oredCriteria&quot; item=&quot;criteria&quot; separator=&quot;or&quot;&gt;</span><br><span class="line">        &lt;if test=&quot;criteria.valid&quot;&gt;</span><br><span class="line">          &lt;trim prefix=&quot;(&quot; prefixOverrides=&quot;and&quot; suffix=&quot;)&quot;&gt;</span><br><span class="line">            &lt;foreach collection=&quot;criteria.criteria&quot; item=&quot;criterion&quot;&gt;</span><br><span class="line">              &lt;choose&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.noValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.singleValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125; #&#123;criterion.value&#125;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.betweenValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125; #&#123;criterion.value&#125; and #&#123;criterion.secondValue&#125;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.listValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125;</span><br><span class="line">                  &lt;foreach close=&quot;)&quot; collection=&quot;criterion.value&quot; item=&quot;listItem&quot; open=&quot;(&quot; separator=&quot;,&quot;&gt;</span><br><span class="line">                    #&#123;listItem&#125;</span><br><span class="line">                  &lt;/foreach&gt;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">              &lt;/choose&gt;</span><br><span class="line">            &lt;/foreach&gt;</span><br><span class="line">          &lt;/trim&gt;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">      &lt;/foreach&gt;</span><br><span class="line">    &lt;/where&gt;</span><br><span class="line">  &lt;/sql&gt;</span><br><span class="line">  &lt;sql id=&quot;Update_By_Example_Where_Clause&quot;&gt;</span><br><span class="line">    &lt;where&gt;</span><br><span class="line">      &lt;foreach collection=&quot;example.oredCriteria&quot; item=&quot;criteria&quot; separator=&quot;or&quot;&gt;</span><br><span class="line">        &lt;if test=&quot;criteria.valid&quot;&gt;</span><br><span class="line">          &lt;trim prefix=&quot;(&quot; prefixOverrides=&quot;and&quot; suffix=&quot;)&quot;&gt;</span><br><span class="line">            &lt;foreach collection=&quot;criteria.criteria&quot; item=&quot;criterion&quot;&gt;</span><br><span class="line">              &lt;choose&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.noValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.singleValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125; #&#123;criterion.value&#125;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.betweenValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125; #&#123;criterion.value&#125; and #&#123;criterion.secondValue&#125;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">                &lt;when test=&quot;criterion.listValue&quot;&gt;</span><br><span class="line">                  and $&#123;criterion.condition&#125;</span><br><span class="line">                  &lt;foreach close=&quot;)&quot; collection=&quot;criterion.value&quot; item=&quot;listItem&quot; open=&quot;(&quot; separator=&quot;,&quot;&gt;</span><br><span class="line">                    #&#123;listItem&#125;</span><br><span class="line">                  &lt;/foreach&gt;</span><br><span class="line">                &lt;/when&gt;</span><br><span class="line">              &lt;/choose&gt;</span><br><span class="line">            &lt;/foreach&gt;</span><br><span class="line">          &lt;/trim&gt;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">      &lt;/foreach&gt;</span><br><span class="line">    &lt;/where&gt;</span><br><span class="line">  &lt;/sql&gt;</span><br><span class="line">  &lt;sql id=&quot;Base_Column_List&quot;&gt;</span><br><span class="line">    emp_id, emp_name, gender, email, d_id</span><br><span class="line">  &lt;/sql&gt;</span><br><span class="line">  &lt;sql id=&quot;WithDept_Column_List&quot;&gt;</span><br><span class="line">    e.emp_id, e.emp_name, e.gender, e.email, e.d_id, d.dept_id, d.dept_name</span><br><span class="line">  &lt;/sql&gt;</span><br><span class="line">  &lt;select id=&quot;selectByExample&quot; parameterType=&quot;com.yzhao.crud.bean.EmployeeExample&quot; resultMap=&quot;BaseResultMap&quot;&gt;</span><br><span class="line">    select</span><br><span class="line">    &lt;if test=&quot;distinct&quot;&gt;</span><br><span class="line">      distinct</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;include refid=&quot;Base_Column_List&quot; /&gt;</span><br><span class="line">    from tbl_emp</span><br><span class="line">    &lt;if test=&quot;_parameter != null&quot;&gt;</span><br><span class="line">      &lt;include refid=&quot;Example_Where_Clause&quot; /&gt;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;orderByClause != null&quot;&gt;</span><br><span class="line">      order by $&#123;orderByClause&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;!--add the Department information with the select--&gt;</span><br><span class="line">  &lt;select id=&quot;selectByExampleWithDept&quot; parameterType=&quot;com.yzhao.crud.bean.EmployeeExample&quot; resultMap=&quot;WithDeptResultMap&quot;&gt;</span><br><span class="line">    select</span><br><span class="line">    &lt;if test=&quot;distinct&quot;&gt;</span><br><span class="line">      distinct</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;include refid=&quot;WithDept_Column_List&quot; /&gt;</span><br><span class="line">    from tbl_emp e</span><br><span class="line">    left join tbl_dept d on e.`d_id`= d.`dept_id`</span><br><span class="line">    &lt;if test=&quot;_parameter != null&quot;&gt;</span><br><span class="line">      &lt;include refid=&quot;Example_Where_Clause&quot; /&gt;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;orderByClause != null&quot;&gt;</span><br><span class="line">      order by $&#123;orderByClause&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  &lt;select id=&quot;selectByPrimaryKey&quot; parameterType=&quot;java.lang.Integer&quot; resultMap=&quot;BaseResultMap&quot;&gt;</span><br><span class="line">    select </span><br><span class="line">    &lt;include refid=&quot;Base_Column_List&quot; /&gt;</span><br><span class="line">    from tbl_emp</span><br><span class="line">    where emp_id = #&#123;empId,jdbcType=INTEGER&#125;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  &lt;select id=&quot;selectByPrimaryKeyWithDept&quot; parameterType=&quot;java.lang.Integer&quot; resultMap=&quot;WithDeptResultMap&quot;&gt;</span><br><span class="line">    select</span><br><span class="line">    &lt;include refid=&quot;WithDept_Column_List&quot; /&gt;</span><br><span class="line">    from tbl_emp e</span><br><span class="line">    left join tbl_dept d on e.`d_id`=d.`dept_id`</span><br><span class="line">    where emp_id = #&#123;empId,jdbcType=INTEGER&#125;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  &lt;delete id=&quot;deleteByPrimaryKey&quot; parameterType=&quot;java.lang.Integer&quot;&gt;</span><br><span class="line">    delete from tbl_emp</span><br><span class="line">    where emp_id = #&#123;empId,jdbcType=INTEGER&#125;</span><br><span class="line">  &lt;/delete&gt;</span><br><span class="line">  &lt;delete id=&quot;deleteByExample&quot; parameterType=&quot;com.yzhao.crud.bean.EmployeeExample&quot;&gt;</span><br><span class="line">    delete from tbl_emp</span><br><span class="line">    &lt;if test=&quot;_parameter != null&quot;&gt;</span><br><span class="line">      &lt;include refid=&quot;Example_Where_Clause&quot; /&gt;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/delete&gt;</span><br><span class="line">  &lt;insert id=&quot;insert&quot; parameterType=&quot;com.yzhao.crud.bean.Employee&quot;&gt;</span><br><span class="line">    insert into tbl_emp (emp_id, emp_name, gender, </span><br><span class="line">      email, d_id)</span><br><span class="line">    values (#&#123;empId,jdbcType=INTEGER&#125;, #&#123;empName,jdbcType=VARCHAR&#125;, #&#123;gender,jdbcType=CHAR&#125;, </span><br><span class="line">      #&#123;email,jdbcType=VARCHAR&#125;, #&#123;dId,jdbcType=INTEGER&#125;)</span><br><span class="line">  &lt;/insert&gt;</span><br><span class="line">  &lt;insert id=&quot;insertSelective&quot; parameterType=&quot;com.yzhao.crud.bean.Employee&quot;&gt;</span><br><span class="line">    insert into tbl_emp</span><br><span class="line">    &lt;trim prefix=&quot;(&quot; suffix=&quot;)&quot; suffixOverrides=&quot;,&quot;&gt;</span><br><span class="line">      &lt;if test=&quot;empId != null&quot;&gt;</span><br><span class="line">        emp_id,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;empName != null&quot;&gt;</span><br><span class="line">        emp_name,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gender != null&quot;&gt;</span><br><span class="line">        gender,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;email != null&quot;&gt;</span><br><span class="line">        email,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;dId != null&quot;&gt;</span><br><span class="line">        d_id,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/trim&gt;</span><br><span class="line">    &lt;trim prefix=&quot;values (&quot; suffix=&quot;)&quot; suffixOverrides=&quot;,&quot;&gt;</span><br><span class="line">      &lt;if test=&quot;empId != null&quot;&gt;</span><br><span class="line">        #&#123;empId,jdbcType=INTEGER&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;empName != null&quot;&gt;</span><br><span class="line">        #&#123;empName,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gender != null&quot;&gt;</span><br><span class="line">        #&#123;gender,jdbcType=CHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;email != null&quot;&gt;</span><br><span class="line">        #&#123;email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;dId != null&quot;&gt;</span><br><span class="line">        #&#123;dId,jdbcType=INTEGER&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/trim&gt;</span><br><span class="line">  &lt;/insert&gt;</span><br><span class="line">  &lt;select id=&quot;countByExample&quot; parameterType=&quot;com.yzhao.crud.bean.EmployeeExample&quot; resultType=&quot;java.lang.Long&quot;&gt;</span><br><span class="line">    select count(*) from tbl_emp</span><br><span class="line">    &lt;if test=&quot;_parameter != null&quot;&gt;</span><br><span class="line">      &lt;include refid=&quot;Example_Where_Clause&quot; /&gt;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">  &lt;update id=&quot;updateByExampleSelective&quot; parameterType=&quot;map&quot;&gt;</span><br><span class="line">    update tbl_emp</span><br><span class="line">    &lt;set&gt;</span><br><span class="line">      &lt;if test=&quot;record.empId != null&quot;&gt;</span><br><span class="line">        emp_id = #&#123;record.empId,jdbcType=INTEGER&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;record.empName != null&quot;&gt;</span><br><span class="line">        emp_name = #&#123;record.empName,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;record.gender != null&quot;&gt;</span><br><span class="line">        gender = #&#123;record.gender,jdbcType=CHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;record.email != null&quot;&gt;</span><br><span class="line">        email = #&#123;record.email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;record.dId != null&quot;&gt;</span><br><span class="line">        d_id = #&#123;record.dId,jdbcType=INTEGER&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/set&gt;</span><br><span class="line">    &lt;if test=&quot;_parameter != null&quot;&gt;</span><br><span class="line">      &lt;include refid=&quot;Update_By_Example_Where_Clause&quot; /&gt;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/update&gt;</span><br><span class="line">  &lt;update id=&quot;updateByExample&quot; parameterType=&quot;map&quot;&gt;</span><br><span class="line">    update tbl_emp</span><br><span class="line">    set emp_id = #&#123;record.empId,jdbcType=INTEGER&#125;,</span><br><span class="line">      emp_name = #&#123;record.empName,jdbcType=VARCHAR&#125;,</span><br><span class="line">      gender = #&#123;record.gender,jdbcType=CHAR&#125;,</span><br><span class="line">      email = #&#123;record.email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      d_id = #&#123;record.dId,jdbcType=INTEGER&#125;</span><br><span class="line">    &lt;if test=&quot;_parameter != null&quot;&gt;</span><br><span class="line">      &lt;include refid=&quot;Update_By_Example_Where_Clause&quot; /&gt;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">  &lt;/update&gt;</span><br><span class="line">  &lt;update id=&quot;updateByPrimaryKeySelective&quot; parameterType=&quot;com.yzhao.crud.bean.Employee&quot;&gt;</span><br><span class="line">    update tbl_emp</span><br><span class="line">    &lt;set&gt;</span><br><span class="line">      &lt;if test=&quot;empName != null&quot;&gt;</span><br><span class="line">        emp_name = #&#123;empName,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;gender != null&quot;&gt;</span><br><span class="line">        gender = #&#123;gender,jdbcType=CHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;email != null&quot;&gt;</span><br><span class="line">        email = #&#123;email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">      &lt;if test=&quot;dId != null&quot;&gt;</span><br><span class="line">        d_id = #&#123;dId,jdbcType=INTEGER&#125;,</span><br><span class="line">      &lt;/if&gt;</span><br><span class="line">    &lt;/set&gt;</span><br><span class="line">    where emp_id = #&#123;empId,jdbcType=INTEGER&#125;</span><br><span class="line">  &lt;/update&gt;</span><br><span class="line">  &lt;update id=&quot;updateByPrimaryKey&quot; parameterType=&quot;com.yzhao.crud.bean.Employee&quot;&gt;</span><br><span class="line">    update tbl_emp</span><br><span class="line">    set emp_name = #&#123;empName,jdbcType=VARCHAR&#125;,</span><br><span class="line">      gender = #&#123;gender,jdbcType=CHAR&#125;,</span><br><span class="line">      email = #&#123;email,jdbcType=VARCHAR&#125;,</span><br><span class="line">      d_id = #&#123;dId,jdbcType=INTEGER&#125;</span><br><span class="line">    where emp_id = #&#123;empId,jdbcType=INTEGER&#125;</span><br><span class="line">  &lt;/update&gt;</span><br></pre></td></tr></table></figure>
+<p>可以由mybatis generator自动生成， idea编辑器有相关编译功能(调用的maven)，<br>当然也可以通过代码搞定。</p>
+<ul>
+<li>mbg.xml, 相关配置可查看mybatis-generator 的官方网站</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE generatorConfiguration</span><br><span class="line">        PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;</span><br><span class="line">        &quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;generatorConfiguration&gt;</span><br><span class="line">    &lt;!--&lt;classPathEntry location=&quot;/Program Files/IBM/SQLLIB/java/db2java.zip&quot; /&gt;--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- Database Connection--&gt;</span><br><span class="line">    &lt;context id=&quot;DB2Tables&quot; targetRuntime=&quot;MyBatis3&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;commentGenerator&gt;</span><br><span class="line">            &lt;property name=&quot;suppressAllComments&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">        &lt;/commentGenerator&gt;</span><br><span class="line"></span><br><span class="line">        &lt;jdbcConnection driverClass=&quot;org.mariadb.jdbc.Driver&quot;</span><br><span class="line">                        connectionURL=&quot;jdbc:mariadb://127.0.0.1:3306/ssm_crud&quot;</span><br><span class="line">                        userId=&quot;root&quot;</span><br><span class="line">                        password=&quot;123456&quot;&gt;</span><br><span class="line">        &lt;/jdbcConnection&gt;</span><br><span class="line"></span><br><span class="line">        &lt;javaTypeResolver &gt;</span><br><span class="line">            &lt;property name=&quot;forceBigDecimals&quot; value=&quot;false&quot; /&gt;</span><br><span class="line">        &lt;/javaTypeResolver&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- Java bean location--&gt;</span><br><span class="line">        &lt;javaModelGenerator targetPackage=&quot;com.yzhao.crud.bean&quot; targetProject=&quot;./src/main/java&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">            &lt;property name=&quot;trimStrings&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">        &lt;/javaModelGenerator&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- Sql mapper file location--&gt;</span><br><span class="line">        &lt;sqlMapGenerator targetPackage=&quot;mapper&quot;  targetProject=&quot;./src/main/resources&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">        &lt;/sqlMapGenerator&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- DAO interface location, mapper interface--&gt;</span><br><span class="line">        &lt;javaClientGenerator type=&quot;XMLMAPPER&quot; targetPackage=&quot;com.yzhao.crud.dao&quot;  targetProject=&quot;./src/main/java&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">        &lt;/javaClientGenerator&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- sql table generator policy--&gt;</span><br><span class="line">        &lt;!--&lt;table schema=&quot;DB2ADMIN&quot; tableName=&quot;ALLTYPES&quot; domainObjectName=&quot;Customer&quot; &gt;--&gt;</span><br><span class="line">            &lt;!--&lt;property name=&quot;useActualColumnNames&quot; value=&quot;true&quot;/&gt;--&gt;</span><br><span class="line">            &lt;!--&lt;generatedKey column=&quot;ID&quot; sqlStatement=&quot;DB2&quot; identity=&quot;true&quot; /&gt;--&gt;</span><br><span class="line">            &lt;!--&lt;columnOverride column=&quot;DATE_FIELD&quot; property=&quot;startDate&quot; /&gt;--&gt;</span><br><span class="line">            &lt;!--&lt;ignoreColumn column=&quot;FRED&quot; /&gt;--&gt;</span><br><span class="line">            &lt;!--&lt;columnOverride column=&quot;LONG_VARCHAR_FIELD&quot; jdbcType=&quot;VARCHAR&quot; /&gt;--&gt;</span><br><span class="line">        &lt;!--&lt;/table&gt;--&gt;</span><br><span class="line"></span><br><span class="line">        &lt;table tableName=&quot;tbl_emp&quot; domainObjectName=&quot;Employee&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/table&gt;</span><br><span class="line"></span><br><span class="line">        &lt;table tableName=&quot;tbl_dept&quot; domainObjectName=&quot;Department&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/context&gt;</span><br><span class="line">&lt;/generatorConfiguration&gt;</span><br></pre></td></tr></table></figure>
+<p>生成代码： MBG.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package com.yzhao.crud.test;</span><br><span class="line"></span><br><span class="line">import org.mybatis.generator.api.MyBatisGenerator;</span><br><span class="line">import org.mybatis.generator.config.Configuration;</span><br><span class="line">import org.mybatis.generator.config.xml.ConfigurationParser;</span><br><span class="line">import org.mybatis.generator.internal.DefaultShellCallback;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public class MBGTTest &#123;</span><br><span class="line"></span><br><span class="line">    public static void  main(String[] args) throws Exception&#123;</span><br><span class="line">        List&lt;String&gt; warnings = new ArrayList&lt;&gt;();</span><br><span class="line">        boolean overwrite = true;</span><br><span class="line">        File configFile = new File(&quot;mbg.xml&quot;);</span><br><span class="line">        ConfigurationParser cp = new ConfigurationParser(warnings);</span><br><span class="line">        Configuration config = cp.parseConfiguration(configFile);</span><br><span class="line">        DefaultShellCallback callback = new DefaultShellCallback(overwrite);</span><br><span class="line">        MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);</span><br><span class="line"></span><br><span class="line">        myBatisGenerator.generate(null);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/08/06/MySQL-ACID/" style="float: left;">
+        ← MySQL -- ACID
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/07/29/Java-并发/">
+        Java 并发 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Kenzhaoyihui. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/kenzhaoyihui" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.weibo.com/u/3478925700" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
