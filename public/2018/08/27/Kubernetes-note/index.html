@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Kubernetes-note | Kenzhaoyihui&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Kenzhaoyihui's Blog">
+    <meta name="author" content="Kenzhaoyihui">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Kenzhaoyihui&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/tags/JAVA/" target="_BLANK" class="animsition-link">JAVA</a></li>
+                    
+                        <li><a href="/tags/XML-RPC/" target="_BLANK" class="animsition-link">XML-RPC</a></li>
+                    
+                        <li><a href="/tags/ELK" target="_BLANK" class="animsition-link">ELK</a></li>
+                    
+                        <li><a href="/tags/SpringBoot" target="_BLANK" class="animsition-link">SpringBoot</a></li>
+                    
+                        <li><a href="/tags/SpringCloud" target="_BLANK" class="animsition-link">SpringCloud</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ELK/" class="animsition-link">ELK<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JAVA/" class="animsition-link">JAVA<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/RPC/" class="animsition-link">RPC<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://github.com/kenzhaoyihui" class="animsition-link">Kenzhaoyihui Github</a></li>
+                    
+                    <li><a href="2993614148@qq.com" class="animsition-link">Email 2993614148@qq.com</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Kenzhaoyihui's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/kenzhaoyihui" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.weibo.com/u/3478925700" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-08-27T10:01:29.000Z" itemprop="datePublished">
+          2018-08-27
+      </time>
+    
+</span>
+                <h1>Kubernetes-note</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="K8s-Master-components"><a href="#K8s-Master-components" class="headerlink" title="K8s Master components:"></a>K8s Master components:</h4><ol>
+<li>kube-apiserver: <ul>
+<li>Component on the master that exposes the Kubernetes API. It is the front-end for the Kubernetes control plane</li>
+</ul>
+</li>
+<li>etcd<ul>
+<li>Consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data</li>
+</ul>
+</li>
+<li>kube-scheduler<ul>
+<li>Component on the master that watches newly created pods that have no node assigned, and selects a node for them to run on.</li>
+</ul>
+</li>
+<li>kube-controller-manager<ul>
+<li>Component on the master that runs controllers .Logically, each controller  is a separate process, but to reduce complexity, they are all compiled into a single binary and run in a single process.</li>
+</ul>
+</li>
+</ol>
+<p>These controllers include:</p>
+<ul>
+<li>Node Controller: Responsible for noticing and responding when nodes go down.</li>
+<li>Replication Controller: Responsible for maintaining the correct number of pods for every replication controller object in the system.</li>
+<li>Endpoints Controller: Populates the Endpoints object (that is, joins Services &amp; Pods).</li>
+<li>Service Account &amp; Token Controllers: Create default accounts and API access tokens for new namespaces.</li>
+</ul>
+<h4 id="K8s-Node-components"><a href="#K8s-Node-components" class="headerlink" title="K8s Node components:"></a>K8s Node components:</h4><ol>
+<li><p>kubelet</p>
+<ul>
+<li>An agent that runs on each node in the cluster. It makes sure that containers are running in a pod.The kubelet takes a set of PodSpecs that are provided through various mechanisms and ensures that the containers described in those PodSpecs are running and healthy. The kubelet doesn’t manage containers which were not created by Kubernetes.</li>
+</ul>
+</li>
+<li><p>kube-proxy</p>
+<ul>
+<li>enables the Kubernetes service abstraction by maintaining network rules on the host and performing connection forwarding</li>
+</ul>
+</li>
+<li><p>Container Runtime</p>
+<ul>
+<li>The container runtime is the software that is responsible for running containers. Kubernetes supports several runtimes: Docker, rkt, runc and any OCI runtime-spec implementation.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Addons"><a href="#Addons" class="headerlink" title="Addons"></a>Addons</h4><ol>
+<li>DNS</li>
+<li>Web UI(Dashboard)</li>
+<li>Container Resource Monitoring</li>
+<li>Cluster-level Logging<br>…</li>
+</ol>
+<h4 id="Compute-Storgae-and-Networking-Extensions"><a href="#Compute-Storgae-and-Networking-Extensions" class="headerlink" title="Compute, Storgae, and Networking Extensions"></a>Compute, Storgae, and Networking Extensions</h4><ol>
+<li>Certificates<ul>
+<li>easyrsa, openssl, cfssl</li>
+<li>Distributing Self-Signed CA Certificate</li>
+</ul>
+</li>
+<li>Cloud  Providers<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>CloudStack</li>
+<li>GCE</li>
+<li>OpenStack</li>
+<li>OVirt</li>
+<li>Photon</li>
+<li>VSphere</li>
+</ul>
+</li>
+<li>Cluster Networking<ul>
+<li>Docker model</li>
+<li>Kubernetes model</li>
+<li>How to implement the kubernetes networking model<ul>
+<li>ACI</li>
+<li>AOS from Apstra</li>
+<li>Big Cloud Fabric from Big Switch Networks</li>
+<li>Cilium</li>
+<li>CNI-Genie from Huawei</li>
+<li>Contiv</li>
+<li>Contrail</li>
+<li>Flannel</li>
+<li>Google Compute Engine(GCE)</li>
+<li>Knitter</li>
+<li>Kube-route</li>
+<li>L2 networks and linux bridging</li>
+<li>Multus(a Multi Network plugin)</li>
+<li>NSX-T</li>
+<li>Huge Networks VCS(Virtualized Cloud Services)</li>
+<li>OpenVSwitch</li>
+<li>OVN(Open Virtual Networking)</li>
+<li>Project Calico</li>
+<li>Romana</li>
+<li>Weave Net from Weaveworks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Logging Architecture<ul>
+<li>Basic logging in Kubernetes</li>
+<li>Logging at the node level – logrotate</li>
+<li>Cluster-level logging architecture</li>
+</ul>
+</li>
+<li>Kubelet Garbage Collection<ul>
+<li>Image Collection</li>
+<li>Container Collection</li>
+<li>Some Garbage Collection features will be replaced by kubelet eviction in the future</li>
+</ul>
+</li>
+<li>Federation – More than one cluster,manage multiple clusters<ul>
+<li><code>kubefed</code> is the recommended way to deploy federated clusters</li>
+<li>federation API resources:<ul>
+<li>Cluster</li>
+<li>ConfigMap</li>
+<li>DaemonSets</li>
+<li>Deployment</li>
+<li>Events</li>
+<li>Hpa</li>
+<li>Ingress</li>
+<li>Jobs</li>
+<li>Namespaces</li>
+<li>ReplicaSets</li>
+<li>Secrets</li>
+<li>Services</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proxies<ul>
+<li>kubectl proxy<ul>
+<li>runs on a user’s desktop or in a pod</li>
+<li>proxies from a localhost address to the Kubernetes apiserver</li>
+<li>client to proxy uses HTTP</li>
+<li>proxy to apiserver uses HTTPS</li>
+<li>locates apiserver</li>
+<li>adds authentication headers</li>
+</ul>
+</li>
+<li>apiserver proxy<ul>
+<li>is a bastion built into the apiserver</li>
+<li>connects a user outside of the cluster to cluster IPs which otherwise might not be reachable</li>
+<li>runs in the apiserver processes</li>
+<li>client to proxy uses HTTPS (or http if apiserver so configured)</li>
+<li>proxy to target may use HTTP or HTTPS as chosen by proxy using available information</li>
+<li>can be used to reach a Node, Pod, or Service</li>
+<li>does load balancing when used to reach a Service</li>
+</ul>
+</li>
+<li>kube proxy<ul>
+<li>runs on each node</li>
+<li>proxies UDP and TCP</li>
+<li>does not understand HTTP</li>
+<li>provides load balancing</li>
+<li>is just used to reach services</li>
+</ul>
+</li>
+<li>a proxy/load-balancer in front of apiserver(s)<ul>
+<li>existence and implementation varies from cluster to cluster (e.g. nginx)</li>
+<li>sits between all clients and one or more apiservers</li>
+<li>acts as load balancer if there are several apiservers.</li>
+</ul>
+</li>
+<li>Cloud Load Balancers on external services<ul>
+<li>are provided by some cloud providers (e.g. AWS ELB, Google Cloud Load Balancer)</li>
+<li>are created automatically when the Kubernetes service has type LoadBalancer</li>
+<li>use UDP/TCP only</li>
+<li>implementation varies by cloud provider.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="8">
+<li>Controller manager metrics<ul>
+<li>These metrics include common Go language runtime metrics such as go_routine count and controller specific metrics such as etcd request latencies or Cloudprovider (AWS, GCE, OpenStack) API latencies that can be used to gauge the health of a cluster.</li>
+<li><a href="http://localhost:10252/metrics" target="_blank" rel="noopener">http://localhost:10252/metrics</a></li>
+</ul>
+</li>
+</ol>
+<h4 id="Kubernetes-Architecture"><a href="#Kubernetes-Architecture" class="headerlink" title="Kubernetes Architecture"></a>Kubernetes Architecture</h4><ol>
+<li>Node – status</li>
+<li>Master-Node communication<ul>
+<li>Cluster -&gt; Master</li>
+<li>Master -&gt; Cluster</li>
+</ul>
+</li>
+<li>Cloud Controller Manager<ul>
+<li>Functions of the CCM<ul>
+<li>Kubernetes controller manager<ul>
+<li>Node Controller</li>
+<li>Route Controller</li>
+<li>Service Controller</li>
+<li>PersistentVolumeLabels Controller</li>
+</ul>
+</li>
+<li>Kubelet</li>
+<li>Kubernetes API server</li>
+</ul>
+</li>
+<li>Plugin mechanism</li>
+<li>Authorization</li>
+<li>Vendor Implementations</li>
+<li>Cluster Administration</li>
+</ul>
+</li>
+</ol>
+<h4 id="Extending-Kubernetes"><a href="#Extending-Kubernetes" class="headerlink" title="Extending Kubernetes"></a>Extending Kubernetes</h4><ol>
+<li>Extending the Kubernetes Cluster</li>
+<li>Extending the Kubernetes API<ul>
+<li>Extending the Kubernetes API with the aggregation layer</li>
+<li>Custom Resources<ul>
+<li>Kubernetes provides two ways to add custom resources to your cluster:<ul>
+<li>CRDs(CustomResourceDefinitions) are simple and can be created without any programming.</li>
+<li>API Aggregation requires programming, but allows more control over API behaviors like how data is stored and conversion between API versions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Compute, Storage,and Networking Extensions</p>
+<ul>
+<li><p>Network plugins</p>
+<ul>
+<li>CNI plugins: adhere to the appc/CNI specification, designed for interoperability.<ul>
+<li>Support hostPort – offical <code>portmap</code> plugin</li>
+<li>Support traffic shaping – offical <code>bandwidth</code> plugin</li>
+</ul>
+</li>
+<li>Kubenet plugin: implements basic cbr0 using the bridge and host-local CNI plugins<ul>
+<li>The standard CNI bridge, lo and host-local plugins are required, at minimum version 0.2.0. Kubenet will first search for them in /opt/cni/bin. Specify cni-bin-dir to supply additional search path. The first found match will take effect.</li>
+<li>Kubelet must be run with the –network-plugin=kubenet argument to enable the plugin</li>
+<li>Kubelet should also be run with the –non-masquerade-cidr=<code>clusterCidr</code> argument to ensure traffic to IPs outside this range will use IP masquerade.</li>
+<li>The node must be assigned an IP subnet through either the –pod-cidr kubelet command-line option or the –allocate-node-cidrs=true –cluster-cidr=<code>cidr</code> controller-manager command-line options.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Device plugins</p>
+</li>
+</ul>
+</li>
+<li>Service Catalog<ul>
+<li>Service Catalog is an extension API that enables applications running in Kubernetes clusters to easily use external managed software offerings, such as a datastore service offered by a cloud provider.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h4><ol>
+<li><p>Images</p>
+<ul>
+<li>Updating Images</li>
+<li>Using a Private Registry<ul>
+<li>Using Google Container Registry(GCR)</li>
+<li>Using AWS EC2 Container Registry(ECR)</li>
+<li>Using Azure Container Registry(ACR)</li>
+<li>Configuring Nodes to Authenticate to a Private Registry</li>
+<li>Pre-pulling Images</li>
+<li>Specifying ImagePullSecrets on a Pod</li>
+</ul>
+</li>
+<li>Use Cases<ul>
+<li>Cluster running only non-proprietary(e.g. open-source) images.No need to hide images.(Use public images on the Docker hub)</li>
+<li>Cluster running some proprietary images which should be hidden to those outside the company, but visible to all cluster users.</li>
+<li>Cluster with a proprietary images, a few of which require stricter access control.</li>
+<li>A multi-tenant cluster where each tenant needs own private registry.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Container Environment Variables</p>
+<ul>
+<li>Container environment<ul>
+<li>A filesystem, which is a combination of an image and one or more volumes.</li>
+<li>Information about the Container itself.</li>
+<li>Information about other objects in the cluster</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Container Lifecycle Hooks</p>
+<ul>
+<li>This page describes how kubelet managed Containers can use the Container lifecycle hook framework to run code triggered by events during their management lifecycle.</li>
+<li>Container hooks<ul>
+<li>PostStart</li>
+<li>PreStop</li>
+</ul>
+</li>
+<li>Hook handler implementations<ul>
+<li>Exec - Executes a specific command, such as pre-stop.sh, inside the cgroups and namespaces of the Container. Resources consumed by the command are counted against the Container</li>
+<li>HTTP - Executes an HTTP request against a specific endpoint on the Container.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Workloads"><a href="#Workloads" class="headerlink" title="Workloads"></a>Workloads</h4><ol>
+<li><p>Pods</p>
+<ul>
+<li>Pods</li>
+<li><p>Pod Lifecycle</p>
+<ul>
+<li>Pod phase<ul>
+<li>Pending</li>
+<li>Running</li>
+<li>Succeeded</li>
+<li>Failed</li>
+<li>Unknown</li>
+</ul>
+</li>
+<li>Pod conditions<ul>
+<li>lastProbeTime</li>
+<li>lastTransitionTime</li>
+<li>message</li>
+<li>reason</li>
+<li>status</li>
+<li>type<ul>
+<li>PodScheduled</li>
+<li>Ready</li>
+<li>Initialized</li>
+<li>Unschedulable</li>
+<li>ContainerReady</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Container probes<ul>
+<li>ExecAction: Executes a specified command inside the Container. The diagnostic is considered successful if the command exits with a status code of 0.</li>
+<li>TCPSocketAction: Performs a TCP check against the Container’s IP address on a specified port. The diagnostic is considered successful if the port is open.</li>
+<li>HTTPGetAction: Performs an HTTP Get request against the Container’s IP address on a specified port and path. The diagnostic is considered successful if the response has a status code greater than or equal to 200 and less than 400.</li>
+</ul>
+</li>
+<li>Restart policy: – restartPolicy<ul>
+<li>Always</li>
+<li>OnFailure</li>
+<li>Never</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Init Containers</p>
+<ul>
+<li>A Pod can have multiple Containers running apps within it, but it can also have one or more Init Containers, which are run before the app Containers are started.</li>
+<li>They always run to completion.</li>
+<li>Each one must complete successfully before the next one is started.</li>
+</ul>
+</li>
+<li>Pod Preset<ul>
+<li>This page provides an overview of PodPresets, which are objects for injecting certain information into pods at creation time. The information can include secrets, volumes, volume mounts, and environment variables.</li>
+</ul>
+</li>
+<li>Disruptions<ul>
+<li>This guide is for application owners who want to build highly available applications, and thus need to understand what types of Disruptions can happen to Pods.</li>
+<li>Voluntary and Involuntary Disruptions</li>
+<li>Dealing with Disruptions<ul>
+<li>Ensure your pod requests the resources it needs.</li>
+<li>Replicate your application if you need higher availability. (Learn about running replicated stateless and stateful applications.)</li>
+<li>For even higher availability when running replicated applications, spread applications across racks (using anti-affinity) or across zones (if using a multi-zone cluster.)</li>
+</ul>
+</li>
+<li>Separating Cluster Owner and Application Owner Roles</li>
+<li>How to perform Disruptive Actions on your Cluster<ul>
+<li>Accept downtime during the upgrade.</li>
+<li>Fail over to another complete replica cluster.</li>
+<li>Write disruption tolerant applications and use PDBs(PodDisruptionBudgets)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>Controllers</p>
+<ul>
+<li><p>ReplicaSet</p>
+<ul>
+<li>ReplicaSet is the next-generation Replication Controller. The only difference between a ReplicaSet and a Replication Controller right now is the selector support. ReplicaSet supports the new set-based selector requirements as described in the labels user guide whereas a Replication Controller only supports equality-based selector requirements.</li>
+<li><p>Alternatives to ReplicaSet:</p>
+<ul>
+<li><p>Deployment(Recommended) – Deployment is a higher-level API object that updates its underlying ReplicaSets and their Pods in a similar fashion as kubectl rolling-update. Deployments are recommended if you want this rolling update functionality, because unlike kubectl rolling-update, they are declarative, server-side, and have additional features. For more information on running a stateless application using a Deployment, please read Run a Stateless Application Using a Deployment.</p>
+</li>
+<li><p>Bare Pods – Unlike the case where a user directly created pods, a ReplicaSet replaces pods that are deleted or terminated for any reason, such as in the case of node failure or disruptive node maintenance, such as a kernel upgrade. For this reason, we recommend that you use a ReplicaSet even if your application requires only a single pod. Think of it similarly to a process supervisor, only it supervises multiple pods across multiple nodes instead of individual processes on a single node. A ReplicaSet delegates local container restarts to some agent on the node (for example, Kubelet or Docker).</p>
+</li>
+<li><p>Job – Use a Job instead of a ReplicaSet for pods that are expected to terminate on their own (that is, batch jobs).</p>
+</li>
+<li><p>DaemonSet – Use a DaemonSet instead of a ReplicaSet for pods that provide a machine-level function, such as machine monitoring or machine logging. These pods have a lifetime that is tied to a machine lifetime: the pod needs to be running on the machine before other pods start, and are safe to terminate when the machine is otherwise ready to be rebooted/shutdown.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ReplicationController</p>
+<ul>
+<li>A ReplicationController ensures that a specified number of pod replicas are running at any one time. In other words, a ReplicationController makes sure that a pod or a homogeneous set of pods is always up and available.</li>
+<li>Common usage pattern<ul>
+<li>Rescheduling</li>
+<li>Scaling</li>
+<li>Rolling updates</li>
+<li>Multiple release tracks</li>
+<li>Using ReplicationControllers with Services</li>
+</ul>
+</li>
+<li>Alternatives to ReplicationController<ul>
+<li>ReplicaSet</li>
+<li>Deployment(Recommended)</li>
+<li>Bare Pods</li>
+<li>Job</li>
+<li>DaemonSet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Deployments<ul>
+<li>A Deployment controller provides declarative updates for Pods and ReplicaSets.You describe a desired state in a Deployment object, and the Deployment controller changes the actual state to the desired state at a controlled rate. You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.</li>
+<li>Use Case<ul>
+<li>Create a Deployment to rollout a ReplicaSet</li>
+<li>Declare the new state of the Pods</li>
+<li>Rollback to an earlier Deployment revision</li>
+<li>Scale up the Deployment to facilitate more load</li>
+<li>Pause the Deployment</li>
+<li>Use the status of the Deployment</li>
+<li>Clean up older ReplicaSets</li>
+</ul>
+</li>
+<li>Alternative to Deployments<ul>
+<li>kubectl rolling update</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>StatefulSets<ul>
+<li>StatefulSet is the workload API object used to manage stateful applications.</li>
+<li>Unlike a Deployment, a StatefulSet maintains a sticky identity for each of their Pods; These pods are created from the same spec, but are not interchangeable: each has a persistent identifier that it maintains across any rescheduling.</li>
+<li>Using StatefulSets:<ul>
+<li>Stable, unique network identifiers.</li>
+<li>Stable, persistent storage.</li>
+<li>Ordered, graceful deployment and scaling.</li>
+<li>Ordered, graceful deletion and termination.</li>
+<li>Ordered, automated rolling updates.</li>
+</ul>
+</li>
+<li>Pod Identity<ul>
+<li>Ordinal Index</li>
+<li>Stable Network ID</li>
+<li>Stable Storage</li>
+<li>Pod Name Label</li>
+</ul>
+</li>
+<li>Pod Management Policies<ul>
+<li>OrderedReady Pod Management</li>
+<li>Parallel Pod Management</li>
+</ul>
+</li>
+<li>Update Strategies<ul>
+<li>On Delete</li>
+<li>Rolling Updates</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DaemonSet<ul>
+<li>A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. As nodes are added to the cluster, Pods are added to them. As nodes are removed from the cluster, those Pods are garbage collected. Deleting a DaemonSet will clean up the Pods it created.</li>
+<li>Typical uses of a DaemonSet:<ul>
+<li>running a cluster storage daemon, such as glusterd, ceph, on each node.</li>
+<li>running a logs collection daemon on every node, such as fluentd or logstash.</li>
+<li>running a node monitoring daemon on every node, such as Prometheus Node Exporter, collectd, Datadog agent, New Relic agent, or Ganglia gmond.</li>
+</ul>
+</li>
+<li>Communicating with Daemon Pods<ul>
+<li>Push: Pods in the DaemonSet are configured to send updates to another service, such as a stats database. They do not have clients.</li>
+<li>NodeIP and Known Port: Pods in the DaemonSet can use a hostPort, so that the pods are reachable via the node IPs. Clients know the list of node IPs somehow, and know the port by convention.</li>
+<li>DNS: Create a headless service with the same pod selector, and then discover DaemonSets using the endpoints resource or retrieve multiple A records from DNS</li>
+<li>Service: Create a service with the same Pod selector, and use the service to reach a daemon on a random node. (No way to reach specific node.)</li>
+</ul>
+</li>
+<li>Alternatives to DaemonSet<ul>
+<li>Init Scripts</li>
+<li>Bare Pods</li>
+<li>Static Pods</li>
+<li>Deployments</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Garbage Collection<ul>
+<li>The role of the Kubernetes garbage collector is to delete certain objects that once had an owner, but no longer have an owner.</li>
+<li>Controlling how the garbage collector deletes dependents<ul>
+<li>Foreground cascading deletion</li>
+<li>Background cascading deletion</li>
+<li>Setting the cascading deletion policy</li>
+<li>Additional note on Deployments</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Jobs - Run to Completion<ul>
+<li>A job creates one or more pods and ensures that a specified number of them successfully terminate. As pods successfully complete, the job tracks the successful completions. When a specified number of successful completions is reached, the job itself is complete. Deleting a Job will cleanup the pods it created.A simple case is to create one Job object in order to reliably run one Pod to completion. The Job object will start a new Pod if the first pod fails or is deleted (for example due to a node hardware failure or a node reboot).A Job can also be used to run multiple pods in parallel.</li>
+<li>Handing Pod and Container Failures<ul>
+<li>Pod Backoff failure policy</li>
+</ul>
+</li>
+<li>Job Termination and Cleanup</li>
+<li>Job Patterns<ul>
+<li>One Job object for each work item, vs. a single Job object for all work items. The latter is better for large numbers of work items. The former creates some overhead for the user and for the system to manage large numbers of Job objects.</li>
+<li>Number of pods created equals number of work items, vs. each pod can process multiple work items. The former typically requires less modification to existing code and containers. The latter is better for large numbers of work items, for similar reasons to the previous bullet.</li>
+<li>Several approaches use a work queue. This requires running a queue service, and modifications to the existing program or container to make it use the work queue. Other approaches are easier to adapt to an existing containerised application.</li>
+</ul>
+</li>
+<li>Advanced Usage<ul>
+<li>Specifying your own pod selector</li>
+</ul>
+</li>
+<li>Alternatives<ul>
+<li>Bare Pods</li>
+<li>Replication Controller</li>
+<li>Single Job starts Controller Pod</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CronJob</li>
+</ul>
+</li>
+</ol>
+<h4 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h4><ol>
+<li>Configuration Best Practices</li>
+<li>Managing Compute Resources for Containers</li>
+<li>Assigning Pods to Nodes</li>
+<li>Taints and Tolerations<ul>
+<li>Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. Tolerations are applied to pods, and allow (but do not require) the pods to schedule onto nodes with matching taints.</li>
+</ul>
+</li>
+<li><p>Secrets</p>
+<ul>
+<li>Objects of type secret are intended to hold sensitive information, such as passwords, OAuth tokens, and ssh keys. Putting this information in a secret is safer and more flexible than putting it verbatim in a pod definition or in a docker image. </li>
+<li>Usage of Secrets<ul>
+<li>as files in a volume mounted on one or more of its containers, </li>
+<li>or used by kubelet when pulling images for the pod.</li>
+</ul>
+</li>
+<li>Using Secrets<ul>
+<li>Using Secrets as Files from a Pod<ul>
+<li>Projection of secret keys to specific paths</li>
+<li>Secret files permissions</li>
+<li>Consuming Secret Values from Volumes</li>
+<li>Mounted Secrets are updated automatically</li>
+</ul>
+</li>
+<li>Using Secrets as Environment Variables<ul>
+<li>Consuming Secret Values from Environment Variables</li>
+</ul>
+</li>
+<li>Using imagePullSecrets<ul>
+<li>Manually specifying an imagePullSecret</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Use cases<ul>
+<li>Pod with ssh keys</li>
+<li>Pods with prod/test credentials</li>
+<li>Dotfiles in serect volume</li>
+<li>Secret visible to one container in pod</li>
+</ul>
+</li>
+<li>Best practices<ul>
+<li>Clients that use the secrets API</li>
+</ul>
+</li>
+<li>Security Properties<ul>
+<li>Protections</li>
+<li>Risks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Organizing Cluster Access Using kubeconfig Files</p>
+<ul>
+<li>Use kubeconfig files to organize information about clusters, users, namespaces, and authentication mechanisms. The kubectl command-line tool uses kubeconfig files to find the information it needs to choose a cluster and communicate with the API server of a cluster.</li>
+</ul>
+</li>
+<li>Pod Priority and Preemption<ul>
+<li>Pods can have priority. Priority indicates the importance of a Pod relative to other Pods. If a Pod cannot be scheduled, the scheduler tries to preempt (evict) lower priority Pods to make scheduling of the pending Pod possible.</li>
+<li>How to use priority and preemption<ul>
+<li>Add one or more PriorityClasses</li>
+<li>Create Pods withpriorityClassName set to one of the added PriorityClasses. Of course you do not need to create the Pods directly; normally you would add priorityClassName to the Pod template of a collection object like a Deployment.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Services-Load-Balancing-and-Networking"><a href="#Services-Load-Balancing-and-Networking" class="headerlink" title="Services, Load Balancing,and Networking"></a>Services, Load Balancing,and Networking</h4><ol>
+<li>Services<ul>
+<li>Services with selectors</li>
+<li>Services without selectors, for example:<ul>
+<li>You want to have an external database cluster in production, but in test you use your own databases.</li>
+<li>You want to point your service to a service in another Namespace or on another cluster.</li>
+<li>You are migrating your workload to Kubernetes and some of your backends run outside of Kubernetes.</li>
+</ul>
+</li>
+<li>Virtual IPs and service proxies<ul>
+<li>Proxy-mode:<ul>
+<li>userspace</li>
+<li>iptables</li>
+<li>ipvs – based on netfilter hook function,but uses hash table as the underlying data structure and works in the kernel space.That means ipvs redirects traffic much faster, and has much better performance when syncing proxy rules. Furthermore, ipvs provides more options for load balancing algorithm, such as: round-robin, least connection, destination hashing, source hashing, shortest expected delay, never queue</li>
+</ul>
+</li>
+<li>Multi-Port Services</li>
+<li>Choosing your own IP address</li>
+<li>Discovering services<ul>
+<li>Environment variables</li>
+<li>DNS</li>
+</ul>
+</li>
+<li>Headless services<ul>
+<li>Sometimes you don’t need or want load-balancing and a single service IP. In this case, you can create “headless” services by specifying “None” for the cluster IP (.spec.clusterIP).</li>
+</ul>
+</li>
+<li>Publishing services - service types<ul>
+<li>Types:<ul>
+<li>ClusterIP – Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType</li>
+<li>NodePort – Exposes the service on each Node’s IP at a static port (the NodePort). A ClusterIP service, to which the NodePort service will route, is automatically created. You’ll be able to contact the NodePort service, from outside the cluster, by requesting NodeIP:NodePort</li>
+<li>LoadBalancer – Exposes the service externally using a cloud provider’s load balancer. NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.</li>
+<li>ExternalName – Maps the service to the contents of the externalName field (e.g. foo.bar.example.com), by returning a CNAME record with its value. No proxying of any kind is set up. This requires version 1.7 or higher of kube-dns</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS for Services and Pods<ul>
+<li>Kubernetes DNS schedules a DNS Pod and Service on the cluster, and configures the kubelets to tell individual containers to use the DNS Service’s IP to resolve DNS names.</li>
+<li>Support DNS mode<ul>
+<li>Service<ul>
+<li>A records</li>
+<li>SRV records</li>
+</ul>
+</li>
+<li>Pods<ul>
+<li>A records</li>
+<li>Pod’s hostname and subdomain fields</li>
+<li>Pod’s DNS Policy – dnsPolicy<ul>
+<li>Default</li>
+<li>ClusterFirst – If dnsPolicy is not explicitly specified, then “ClusterFirst” is used.</li>
+<li>ClusterFirstWithHostNet</li>
+<li>None</li>
+</ul>
+</li>
+<li>Pod’s DNS Config – dnsPolicy is set to None, then it can be specified<ul>
+<li>nameservers</li>
+<li>searches</li>
+<li>options</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Connecting Application with Services</li>
+<li>Ingress<ul>
+<li>An API object that manages external access to the services in a cluster, typically HTTP.</li>
+<li>Ingress can provide load balancing, SSL termination and name-based virtual hosting.</li>
+<li>Ingress controllers<ul>
+<li>Kubernetes currently supports and maintains GCE and nginx controllers.</li>
+<li>F5 Networks provides support and maintenance for the F5 BIG-IP Controller for Kubernetes.</li>
+<li>Kong offers community or commercial support and maintenance for the Kong Ingress Controller for Kubernetes</li>
+<li>Traefik is a fully featured ingress controller (Let’s Encrypt, secrets, http2, websocket…), and it also comes with commercial support by Containous</li>
+<li>NGINX, Inc. offers support and maintenance for the NGINX Ingress Controller for Kubernetes</li>
+</ul>
+</li>
+<li>Type of Ingress<ul>
+<li>Single Service Ingress</li>
+<li>Simple fanout</li>
+<li>Name based virtual hosting</li>
+<li>TLS</li>
+<li>Loadbalancing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Network Policies<ul>
+<li>A network policy is a specification of how groups of pods are allowed to communicate with each other and other network endpoints.</li>
+<li>NetworkPolicy resources use labels to select pods and define rules which specify what traffic is allowed to the selected pods.</li>
+<li>Default policies<ul>
+<li>Default deny all ingress traffic</li>
+<li>Default allow all ingress traffic</li>
+<li>Default deny all egress traffic</li>
+<li>Default allow all egress traffic</li>
+<li>Default deny all ingress and all egress traffic</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Adding entries to Pod /etc/hosts with HostAliases</li>
+</ol>
+<h4 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h4><ol>
+<li>Volumes<ul>
+<li>On-disk files in a Container are ephemeral, which presents some problems for non-trivial applications when running in Containers. First, when a Container crashes, kubelet will restart it, but the files will be lost - the Container starts with a clean state. Second, when running Containers together in a Pod it is often necessary to share files between those Containers. The Kubernetes Volume abstraction solves both of these problems.</li>
+<li>Kubernetes supports types of volumes:<ul>
+<li>awsElasticBlockStore</li>
+<li>azureDisk</li>
+<li>azureFile</li>
+<li>cephfs</li>
+<li>configMap</li>
+<li>downwardAPI</li>
+<li>emptyDir</li>
+<li>fc</li>
+<li>flocker</li>
+<li>gcePersistentDisk</li>
+<li>gitRepo (deprecated)</li>
+<li>glusterfs</li>
+<li>hostPath</li>
+<li>iscsi</li>
+<li>local</li>
+<li>nfs</li>
+<li>persistentVolumeClaim</li>
+<li>projected</li>
+<li>portworxVolume</li>
+<li>quobyte</li>
+<li>rdb</li>
+<li>scaleIO</li>
+<li>secret</li>
+<li>storageos</li>
+<li>vsphereVolume</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Persistent Volumes<ul>
+<li>Lifecycle of a volume and claim<ul>
+<li>Provisoning<ul>
+<li>Static</li>
+<li>Dynamic</li>
+</ul>
+</li>
+<li>Binding</li>
+<li>Using</li>
+<li>Storage Object in Use Protection</li>
+<li>Reclaiming<ul>
+<li>Retain</li>
+<li>Delete</li>
+<li>Recycle</li>
+</ul>
+</li>
+<li>Expanding Persistent Volumes Claims<ul>
+<li>Resizing a volume containing a file system</li>
+<li>Resizing an in-use PersistentVolumeClaim</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Types of Persisient Volumes<ul>
+<li>GCEPersistentDisk</li>
+<li>AWSElasticBlockStore</li>
+<li>AzureFile</li>
+<li>AzureDisk</li>
+<li>FC</li>
+<li>Flexvolume</li>
+<li>Flocker</li>
+<li>NFS</li>
+<li>iSCSI</li>
+<li>RBD (Ceph Block Device)</li>
+<li>CephFS</li>
+<li>Cinder (OpenStack block storage)</li>
+<li>Glusterfs</li>
+<li>VsphereVolume</li>
+<li>Quobyte Volumes</li>
+<li>HostPath (Single node testing only – local storage is not supported in any way and WILL NOT WORK in a multi-node cluster)</li>
+<li>Portworx Volumes</li>
+<li>ScaleIO Volumes</li>
+<li>StorageOS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Storage Classes</li>
+<li>Dynamic Volume Provisioning</li>
+<li>Node-specific Volume Limits</li>
+</ol>
+<h4 id="Policies"><a href="#Policies" class="headerlink" title="Policies"></a>Policies</h4><ol>
+<li>Pesource Quotas</li>
+<li>Pod Security Policies</li>
+</ol>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/08/08/Spring-Code-Note/">
+        Spring Code Note →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Kenzhaoyihui. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/kenzhaoyihui" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.weibo.com/u/3478925700" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
