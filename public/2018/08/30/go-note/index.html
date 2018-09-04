@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>JAVA 8 新特性 | Kenzhaoyihui&#39;s Blog</title>
+  <title>go note | Kenzhaoyihui&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -198,50 +198,47 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2018-07-27T01:07:00.000Z" itemprop="datePublished">
-          2018-07-27
+      <time datetime="2018-08-30T07:58:00.000Z" itemprop="datePublished">
+          2018-08-30
       </time>
     
     
     | 
-    <a href='/tags/JAVA/'>JAVA</a>
+    <a href='/tags/Go/'>Go</a>
     
     
 </span>
-                <h1>JAVA 8 新特性</h1>
+                <h1>go note</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="JAVA-8-常见新特性"><a href="#JAVA-8-常见新特性" class="headerlink" title="JAVA 8 常见新特性"></a>JAVA 8 常见新特性</h3><ul>
-<li><h4 id="Lambda-包括更好的类型推断）"><a href="#Lambda-包括更好的类型推断）" class="headerlink" title="Lambda(包括更好的类型推断）"></a>Lambda(包括更好的类型推断）</h4></li>
-<li><h4 id="Stream-API"><a href="#Stream-API" class="headerlink" title="Stream API"></a>Stream API</h4></li>
-<li><h4 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h4></li>
-<li><h4 id="方法引用与构造器引用"><a href="#方法引用与构造器引用" class="headerlink" title="方法引用与构造器引用"></a>方法引用与构造器引用</h4></li>
-<li><h4 id="New-Date-Time-API-JSR-310"><a href="#New-Date-Time-API-JSR-310" class="headerlink" title="New Date/Time API(JSR 310)"></a>New Date/Time API(JSR 310)</h4></li>
-<li><h4 id="重复注解和类型注解"><a href="#重复注解和类型注解" class="headerlink" title="重复注解和类型注解"></a>重复注解和类型注解</h4></li>
-<li><h4 id="Optional-最大化减少空指针异常"><a href="#Optional-最大化减少空指针异常" class="headerlink" title="Optional 最大化减少空指针异常"></a>Optional 最大化减少空指针异常</h4></li>
-<li><h4 id="接口的静态方法和默认方法"><a href="#接口的静态方法和默认方法" class="headerlink" title="接口的静态方法和默认方法"></a>接口的静态方法和默认方法</h4></li>
-<li><h4 id="Java编译器的新特性-–-参数名称-parameters"><a href="#Java编译器的新特性-–-参数名称-parameters" class="headerlink" title="Java编译器的新特性 – 参数名称(-parameters)"></a>Java编译器的新特性 – 参数名称(-parameters)</h4></li>
-<li><h4 id="Hashorn-JavaScript引擎-支持jss）和类依赖分析器-jdeps"><a href="#Hashorn-JavaScript引擎-支持jss）和类依赖分析器-jdeps" class="headerlink" title="Hashorn JavaScript引擎 (支持jss）和类依赖分析器(jdeps)"></a>Hashorn JavaScript引擎 (支持jss）和类依赖分析器(jdeps)</h4></li>
-<li><h4 id="对Base64编码的支持"><a href="#对Base64编码的支持" class="headerlink" title="对Base64编码的支持"></a>对Base64编码的支持</h4></li>
-<li><h4 id="并行数组"><a href="#并行数组" class="headerlink" title="并行数组"></a>并行数组</h4></li>
-<li><h4 id="并发性"><a href="#并发性" class="headerlink" title="并发性"></a>并发性</h4></li>
-<li><h4 id="JVM-新特性-–-使用Metaspace-JEP-122-代替持久代-PermGen-space"><a href="#JVM-新特性-–-使用Metaspace-JEP-122-代替持久代-PermGen-space" class="headerlink" title="JVM 新特性 – 使用Metaspace(JEP 122) 代替持久代(PermGen space)"></a>JVM 新特性 – 使用Metaspace(JEP 122) 代替持久代(PermGen space)</h4></li>
-</ul>
-<p>转自： <a href="https://blog.csdn.net/u014470581/article/details/54944384" target="_blank" rel="noopener">https://blog.csdn.net/u014470581/article/details/54944384</a></p>
+      		<p>第1章 课程介绍<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎大家来到深度讲解Go语言的课堂。本课程将从基本语法讲起，逐渐深入，帮助同学深度理解Go语言面向接口，函数式编          程，错误 处理，测试，并行计算等元素，并带领大家实现一个分布式爬虫的实战项目。</span><br><span class="line">没有对象，没有继承多态，没有泛型， 没有try/catch； 有接口，函数式编程， CSP并发模型（goroutine+channel）</span><br></pre></td></tr></table></figure></p>
+<p>第2章 基础语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">量，常量，类型，选择，循环，函数，指针，本章节带领大家学习一门新语言所需的必备语法知识。让大家对Go语言有一个初步的认识！</span><br></pre></td></tr></table></figure></p>
+<p>第3章 内建容器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本章节我们来学习数组，切片，Map和字符串。在Go语言中，我们一般不直接使用数组，而是使用切片来管理线性表结构，它的语法类似python的list，不过更强大哦。当然，Map和字符串的学习也是必不可少。掌握至此，我们就可以写一些简单的算法了，刷刷leetcode不在话下，我们就来试一试。...</span><br></pre></td></tr></table></figure></p>
+<p>第4章 面向“对象”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Go语言没有class，只有struct。我们来看看struct如何使用，Go语言给结构体定义类似方法或者成员函数的做法非常有特色。我们还将学习Go语言的包的概念，以及如何封装，如何扩展已有类型等。我们还将学习GOPATH和Go语言项目的目录结构，如何从网上下载依赖包等一系列项目相关的知识。我们将以“树”的结构和遍历作为贯穿本章...</span><br></pre></td></tr></table></figure></p>
+<p>第5章 面向接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这一章我们从duck typing的概念开始学起，还将探讨其他语言中对duck typing的支持，由此引出接口的概念。我们将深入理解Go语言接口的内部实现以及使用接口实现组合的模式。</span><br></pre></td></tr></table></figure></p>
+<p>第6章 函数式编程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在其他通用语言中，函数式编程是“高级”概念，但对于Go语言却非常基本。本章我们将讲解函数式编程的概念并且比较其他语言函数式编程的实现方法。我们将重点理解闭包。这章中我们将采用多样的例题来帮助大家更好的理解闭包，函数作为一等公民等及其常见概念和应用方法。...</span><br></pre></td></tr></table></figure></p>
+<p>第7章 错误处理和资源管理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这将是本课程最“无聊”的一章，但却是区分出优秀软件工程师的关键能力。Go语言独特的defer/panic/recover，以及错误机制，在社区有着广泛的争论。我们来深入理解Go语言的错误处理机制，看看Go语言如何区分错误以及异常。最后，我们实现一个Web应用微型项目，采用商业服务的错误处理思路，结合函数式编程，来演示Go语言错误...</span><br></pre></td></tr></table></figure></p>
+<p>第8章 测试与性能调优<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Go语言的测试不同于其他如junit，Go语言采用“表格驱动测试”的理念。我们将学习和体会这样的理念，并用Go语言的测试支持库来实践表格驱动测试，并做代码覆盖和性能检测，通过內建的性能调优工具来优化我们之前的算法。最后演示了对http服务器的多种粒度的测试。...</span><br></pre></td></tr></table></figure></p>
+<p>第9章 Goroutine<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这一章开始我们进入并发编程。我们讲解Goroutine，协程的概念，以及背后的Go语言调度器。</span><br></pre></td></tr></table></figure></p>
+<p>第10章 Channel<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Channel是Goroutine之间通信的桥梁，它和函数一样是一等公民。在介绍完Channel的语法及运行方式后，我们将采用数个例题来演示Go语言并发编程中最常见的任务极其解决模式。</span><br></pre></td></tr></table></figure></p>
+<p>第11章 http及其他标准库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这里我们简要介绍一下Go语言中非常重要而且封装良好的http标准库，回顾并实现http客户端和服务器。我们还介绍了Go语言中其他的标准库。</span><br></pre></td></tr></table></figure></p>
+<p>第12章 迷宫的广度优先搜索<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这章我们将综合运用学过的知识实现一个广度优先算法来解迷宫，为接下来的实战项目做好技术和算法上的准备。广度优先算法不仅是面试和工作中常用的技术，而且实现上相比大部分其它算法更为复杂，是检验是否熟练掌握一门语言的经典例题。让我们来试一试吧。...</span><br></pre></td></tr></table></figure></p>
+<p>第13章 开始实战项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">至此为止，恭喜同学完成了这门课Go语言部分的学习。接下来我们来进入实战项目。本章将介绍项目的具体内容，课题的选择，技术选型，总体架构，以及实现步骤。</span><br></pre></td></tr></table></figure></p>
+<p>第14章 单任务版爬虫<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在考虑性能之前我们首先应该考虑正确性。单任务版爬虫确保我们能够正确爬取我们所需的信息。我们应用了之前练习的广度优先算法，抽象出Parser和Fetcher，学习正则表达式，成功实现并运行单任务版爬虫。</span><br></pre></td></tr></table></figure></p>
+<p>第15章 并发版爬虫<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">为了提升爬虫性能，我们抽象出Worker的概念，并添加调度器，实现并发版爬虫。我们应用接口的概念，完成了由简至复杂的多个调度器的实现。同学可以在实战项目中更真实的体会并学习Go语言并发编程的多种模式。</span><br></pre></td></tr></table></figure></p>
+<p>第16章 数据存储和展示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是时候检验我们项目的成果了。我们将采用Docker+ElasticSearch来存储我们爬取的信息。在简单了解Docker和ElasticSearch后，我们将使用ElasticSearch的Go语言客户端将爬取数据写入。之后我们使用Go语言的模板引擎迅速实现前端网页展示。至此，我们已经可以尝试自己喜欢的搜索条件去查看数据啦。...</span><br></pre></td></tr></table></figure></p>
+<p>第17章 分布式爬虫<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本章在简要介绍分布式概念后，将我们的并发爬虫改写成分布式。我们在很少改动的情况下，加入jsonrpc客户/服务端，实现并部署分布式爬虫。最后探讨实战项目的更多改进方案。</span><br></pre></td></tr></table></figure></p>
+<p>第18章 课程总结<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">感谢同学们学到这里，恭喜同学们给自己的技术栈加上了非常重要的Go语言技能。希望同学们带着这门课上学到的知识，更好的参与到项目中去，共同推动Go语言的发展。</span><br></pre></td></tr></table></figure></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/07/27/JAVA-8-Stream-API/" style="float: left;">
-        ← JAVA 8 -- Stream API
-    </a>
     
-    
-    <a class="pull-right" href="/2018/07/22/java-CountDownLatch、CyclicBarrier和-Semaphore/">
-        java -- CountDownLatch、CyclicBarrier和 Semaphore →
+    <a class="pull-right" href="/2018/08/29/Cache-System-Algr/">
+        Cache System Algr →
     </a>
     
 </nav>
